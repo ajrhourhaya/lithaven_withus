@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="description" content="Novels, Science, Imagination">
+  <meta name="author" content="AJRHOURH AYA  CODE APPOGE : 24001805">
+  <meta name="keywords" content="novels, science, imagination">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LitHaven</title>
+
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-style: italic;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100%;
+      background-image: url('BACK.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    span { 
+        color: #f6e5c7;
+     }
+    .div1 {
+      font-weight: bold;
+      font-size: 50px;
+      text-align: center;
+      margin-top: 50px;
+      color: #F9C66A;
+    }
+    .part {
+      font-size: 18px;
+      color: #f4e5cc;
+      margin-top: 20px;
+    }
+    .section-wrapper {
+      max-width: 600px;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .section-card {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .section-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+    }
+
+    .section-card .icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: orange;
+    }
+    .section-card h3 {
+      color: orange;
+      margin-bottom: 5px;
+    }
+    .page {
+      display: none;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+    }
+    .page h2 {
+      color: orange;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color: rgba(255, 165, 0, 0.2);
+      border-radius: 12px;
+      padding: 15px;
+      width: 180px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px rgba(255,165,0,0.7);
+    }
+    .card .icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .card h4 {
+      color: orange;
+      margin-bottom: 5px;
+    }
+    .card p {
+      font-size: 0.85em;
+      color: #f4e5cc;
+      margin-bottom: 5px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
+    .tags span {
+      background-color: orange;
+      color: black;
+      font-size: 0.7em;
+      padding: 2px 6px;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="div1">
+    <p>Explore <span>the</span> Universe <span>of</span></p> 
+    <p>Knowledge <span>and</span> Stories</p>
+    <div class="part">
+      <p>Dive into a world of novels, science, and imagination.</p>
+    </div>
+  </div>
+  <section class="section-wrapper">
+    <div class="section-card" onclick="showSection('novels')">
+      <div class="icon">📚</div>
+      <h3>Novels & Genres</h3>
+      <p>Explore books by genre: Mystery, Romance, Fantasy...</p>
+    </div>
+
+    <div class="section-card" onclick="showSection('science')">
+      <div class="icon">🔬</div>
+      <h3>Science Corner</h3>
+      <p>Read articles about science concepts.</p>
+    </div>
+
+    <div class="section-card" onclick="showSection('imagination')">
+      <div class="icon">✏️</div>
+      <h3>Imagination Lab</h3>
+      <p>Create stories and imaginative worlds.</p>
+    </div>
+  </section>
+  <div class="page" id="novels">
+    <h2>📚 Novels & Genres</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📖</div>
+        <h4>The Great Gatsby</h4>
+        <p>by F. Scott Fitzgerald</p>
+        <div class="tags">
+          <span>Classic</span>
+          <span>Mystery</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h4>Pride and Prejudice</h4>
+        <p>by Jane Austen</p>
+        <div class="tags">
+          <span>Romance</span>
+          <span>Classic</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h4>Harry Potter</h4>
+        <p>by J.K. Rowling</p>
+        <div class="tags">
+          <span>Fantasy</span>
+          <span>Adventure</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page" id="science">
+    <h2>🔬 Science Corner</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">⚛️</div>
+        <h4>Physics Basics</h4>
+        <p>Learn about atoms and forces</p>
+        <div class="tags"><span>Physics</span></div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧬</div>
+        <h4>Biology</h4>
+        <p>Cells and Genetics explained</p>
+        <div class="tags"><span>Biology</span></div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌌</div>
+        <h4>Space Exploration</h4>
+        <p>Discover planets and stars</p>
+        <div class="tags"><span>Astronomy</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="page" id="imagination">
+    <h2>✏️ Imagination Lab</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📝</div>
+        <h4>Short Stories</h4>
+        <p>Create your own story</p>
+        <div class="tags"><span>Writing</span></div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎭</div>
+        <h4>Character Design</h4>
+        <p>Build unique characters</p>
+        <div class="tags"><span>Creativity</span></div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h4>World Building</h4>
+        <p>Create new imaginary worlds</p>
+        <div class="tags"><span>Fantasy</span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function showSection(id) {
+      const pages = document.querySelectorAll(".page");
+      pages.forEach(page => page.style.display = "none");
+
+      const active = document.getElementById(id);
+      active.style.display = "block";
+      active.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
